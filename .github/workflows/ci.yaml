@@ -17,6 +17,8 @@ jobs:
       
       - name: Install Dependencies
         run: npm install 
+        env:
+          NODE_ENV: development
 
       - name: Run Tests
         run: npm test
