@@ -15,16 +15,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 18  # use the version you're targeting
 
       - name: Install Dependencies
         run: npm install
 
-      - name: List local node binaries
-        run: ls -l node_modules/.bin
-
-      - name: Show test script
-        run: cat package.json
-
-      - name: Run Jest Directly
-        run: npx jest
+      - name: Run Tests
+        run: npm test
